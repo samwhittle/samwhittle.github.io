@@ -1,0 +1,227 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Samuel Whittle</title>
+  <meta name="description" content="Samuel Whittle — rheumatologist and epidemiologist, Adelaide. Founding editor-in-chief of the Australian Rheumatology Journal.">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+
+  <meta property="og:title" content="Samuel Whittle">
+  <meta property="og:description" content="Rheumatologist & epidemiologist, Adelaide.">
+  <meta property="og:image" content="https://sam.xyz/sam-whittle.jpg">
+  <meta property="og:url" content="https://sam.xyz/">
+  <meta name="twitter:card" content="summary">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --bg: #f6f2eb;
+      --surface: #fffdf9;
+      --ink: #1f2a2e;
+      --muted: #5b6669;
+      --rule: #e2dbcf;
+      --accent: #9a3b26;
+      --serif: "Newsreader", Georgia, "Times New Roman", serif;
+      --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #141a1c;
+        --surface: #1b2326;
+        --ink: #ece6dc;
+        --muted: #9aa5a8;
+        --rule: #2c3639;
+        --accent: #e39a7f;
+      }
+    }
+
+    * { box-sizing: border-box; margin: 0; }
+    html { -webkit-text-size-adjust: 100%; }
+    body {
+      background: var(--bg);
+      color: var(--ink);
+      font-family: var(--sans);
+      font-size: 17px;
+      line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    main {
+      flex: 1;
+      width: 100%;
+      max-width: 1040px;
+      margin: 0 auto;
+      padding: 72px 32px 48px;
+      display: grid;
+      grid-template-columns: minmax(240px, 340px) 1fr;
+      gap: 64px;
+      align-items: start;
+    }
+
+    .portrait {
+      position: sticky;
+      top: 48px;
+    }
+    .portrait img {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 4 / 5;
+      object-fit: cover;
+      object-position: 50% 15%;
+      border-radius: 4px;
+      filter: saturate(0.9);
+    }
+
+    .eyebrow {
+      font-size: 13px;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 14px;
+    }
+    h1 {
+      font-family: var(--serif);
+      font-weight: 500;
+      font-size: clamp(42px, 6vw, 64px);
+      line-height: 1.02;
+      letter-spacing: -0.015em;
+      margin-bottom: 32px;
+    }
+
+    .bio {
+      font-family: var(--serif);
+      font-size: 20px;
+      line-height: 1.6;
+      max-width: 36em;
+    }
+    .bio p + p { margin-top: 1em; }
+    .bio a {
+      color: inherit;
+      text-decoration: underline;
+      text-decoration-color: var(--accent);
+      text-decoration-thickness: 1px;
+      text-underline-offset: 3px;
+    }
+    .bio a:hover { color: var(--accent); }
+
+    .links {
+      list-style: none;
+      padding: 0;
+      margin-top: 44px;
+      border-top: 1px solid var(--rule);
+    }
+    .links a {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 4px 16px;
+      padding: 18px 4px;
+      border-bottom: 1px solid var(--rule);
+      color: inherit;
+      text-decoration: none;
+      transition: background 0.15s, padding 0.15s;
+    }
+    .links a:hover, .links a:focus-visible {
+      background: var(--surface);
+      padding-left: 14px;
+      padding-right: 14px;
+    }
+    .links .name { font-weight: 600; font-size: 16px; }
+    .links .desc { grid-column: 1; color: var(--muted); font-size: 14.5px; }
+    .links .arrow {
+      grid-row: 1 / span 2;
+      grid-column: 2;
+      align-self: center;
+      color: var(--accent);
+      font-size: 18px;
+      transition: transform 0.15s;
+    }
+    .links a:hover .arrow { transform: translateX(3px); }
+
+    footer {
+      max-width: 1040px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 24px 32px 40px;
+      font-size: 14px;
+      color: var(--muted);
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 8px;
+    }
+    footer a { color: inherit; }
+    footer a:hover { color: var(--accent); }
+
+    @media (max-width: 760px) {
+      main {
+        grid-template-columns: 1fr;
+        gap: 32px;
+        padding: 32px 16px 32px;
+      }
+      .portrait { position: static; width: 168px; }
+      .portrait img { aspect-ratio: 1 / 1; object-position: 72% 18%; border-radius: 50%; }
+      .bio { font-size: 18.5px; }
+      footer { padding: 16px 16px 32px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <figure class="portrait">
+      <img src="sam-whittle.jpg" alt="Samuel Whittle speaking at a lectern" width="656" height="984">
+    </figure>
+
+    <div>
+      <p class="eyebrow">Rheumatologist &amp; Epidemiologist</p>
+      <h1>Samuel Whittle</h1>
+
+      <div class="bio">
+        <p>Sam Whittle is a senior consultant rheumatologist at the Queen Elizabeth Hospital in Adelaide, a senior lecturer at the University of Adelaide, and an adjunct senior research fellow at Monash University.</p>
+        <p>His work centres on getting good evidence into practice. He serves on the executive committee of the <a href="https://anzmusc.org/">Australia &amp; New Zealand Musculoskeletal Clinical Trials Network</a> (ANZMUSC) and is an ANZMUSC Practitioner Fellow. He has helped to develop the <a href="https://livingguidelines.org/">Australian Living Guidelines</a> for inflammatory arthritis and juvenile idiopathic arthritis, which are updated continuously as new evidence emerges.</p>
+        <p>He is the founding editor-in-chief of the <a href="https://www.arj.org.au/">Australian Rheumatology Journal</a>, a diamond open-access journal owned by the rheumatology community. He is a past president of the Australian Rheumatology Association and serves on the executive committee of the <a href="https://aplar.org/">Asia-Pacific League of Associations for Rheumatology</a> (APLAR).</p>
+      </div>
+
+      <ul class="links">
+        <li><a href="https://www.arj.org.au/">
+          <span class="name">Australian Rheumatology Journal</span>
+          <span class="desc">Founding editor-in-chief</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a></li>
+        <li><a href="https://livingguidelines.org/">
+          <span class="name">Living Guidelines</span>
+          <span class="desc">Inflammatory arthritis and juvenile idiopathic arthritis</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a></li>
+        <li><a href="https://scholar.google.com/citations?sortby=pubdate&amp;hl=en&amp;user=6P9otGEAAAAJ&amp;view_op=list_works">
+          <span class="name">Publications</span>
+          <span class="desc">Google Scholar</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a></li>
+        <li><a href="https://samwhittle.github.io/markdown-cv/">
+          <span class="name">Curriculum vitae</span>
+          <span class="desc">Full academic CV</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a></li>
+        <li><a href="https://anzmusc.org/">
+          <span class="name">ANZMUSC</span>
+          <span class="desc">Australia &amp; New Zealand Musculoskeletal Clinical Trials Network</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a></li>
+      </ul>
+    </div>
+  </main>
+
+  <footer>
+    <span>Adelaide, South Australia</span>
+    <a href="mailto:sam@sam.xyz">sam@sam.xyz</a>
+  </footer>
+</body>
+</html>
